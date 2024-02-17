@@ -3,10 +3,12 @@ import { buttonVariants } from "@/components/ui/button";
 import { UserAuthForm } from "@/components/user-auth-form";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function RegisterPage() {
   return (
-    <div className="container flex h-screen w-screen flex-col items-center justify-center">
+    <Suspense fallback={<></>}>
+      <div className="container flex h-screen w-screen flex-col items-center justify-center">
       <Link
         href="/"
         className={cn(
@@ -42,5 +44,6 @@ export default function RegisterPage() {
         </p>
       </div>
     </div>
+    </Suspense>
   );
 }
