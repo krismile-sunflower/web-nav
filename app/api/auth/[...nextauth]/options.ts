@@ -4,6 +4,9 @@ import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import {compare} from "bcrypt";
+import {PrismaClient} from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
