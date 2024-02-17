@@ -8,7 +8,7 @@ import { compare } from "bcrypt";
 
 const prisma = new PrismaClient();
 
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
     GitHubProvider({
@@ -30,7 +30,7 @@ export const authOptions: NextAuthOptions = {
         if (!email || !password) {
           throw new Error("Missing username or password");
         }
-        
+
         const user = await prisma.user.findUnique({
           where: {
             email: credentials?.email,
