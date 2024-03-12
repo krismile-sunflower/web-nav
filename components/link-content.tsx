@@ -1,7 +1,9 @@
+'use client'
 import Image from "next/image"
 import { CategoryWithLinks } from "@/app/links"
 import { Link as SiteLink } from "@prisma/client"
 import Link from "next/link"
+import AnimationCard from "./animation_card"
 
 export function LinkItem({ link }: { link: SiteLink }) {
   return (
@@ -9,8 +11,9 @@ export function LinkItem({ link }: { link: SiteLink }) {
       href={link.url}
       target="_blank"
     >
-      <div className="relative mb-6 flex min-h-[122px] min-w-0 cursor-pointer flex-col break-words rounded-lg border border-gray-200 p-4 shadow-md transition-all hover:-translate-y-1 hover:scale-105 hover:bg-border hover:shadow-lg  xl:mb-0">
-        <div className="flex items-center">
+      <div className="relative mb-6 mr-10 flex min-h-[122px] min-w-0 cursor-pointer flex-col break-words">
+       <AnimationCard className="min-h-[122px]">
+       <div className="flex items-center">
           <div className="mr-3 flex size-10 overflow-hidden rounded-full">
             {
               link.icon
@@ -30,6 +33,7 @@ export function LinkItem({ link }: { link: SiteLink }) {
         <div className="mt-2 line-clamp-2 text-sm text-primary">
           { link.description }
         </div>
+       </AnimationCard>
       </div>
     </Link>
   )

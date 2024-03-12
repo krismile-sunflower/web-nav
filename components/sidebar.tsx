@@ -39,9 +39,9 @@ export function Sidebar({ className, navItems }: SidebarProps) {
                   {navItems.map((category) => {
                     return (
                       <div
-                        className={`block cursor-pointer rounded-lg hover:bg-gray-100 hover:text-purple-500 ${
+                        className={`block cursor-pointer rounded-lg hover:bg-gray-100 hover:text-black ${
                           activeTabId === category.id
-                            ? "bg-gray-100 text-purple-500"
+                            ? "bg-gray-100 text-black"
                             : "text-primary"
                         }`}
                         key={category.id}
