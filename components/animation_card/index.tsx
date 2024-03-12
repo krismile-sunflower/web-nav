@@ -14,7 +14,7 @@ const AnimationCard = (props: Props) => {
 
     return <div>
         <div
-            className={cn(" flex-center relative  flex-col overflow-hidden rounded-lg border border-[rgba(255,255,255,0.1)] bg-[#1C1C1F] p-3 hover:-translate-y-1 hover:scale-105 hover:bg-border hover:shadow-md", props.className)}
+            className={cn(" flex-center relative  flex-col overflow-hidden rounded-lg border p-3 hover:-translate-y-1 hover:scale-105 hover:bg-border hover:shadow-md", props.className)}
             onMouseMove={(e: React.MouseEvent<HTMLDivElement>) => {
                 if (cardRef.current) {
                     setIsShowLight(true)

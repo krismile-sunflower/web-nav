@@ -11,7 +11,7 @@ export function LinkItem({ link }: { link: SiteLink }) {
       href={link.url}
       target="_blank"
     >
-      <div className="relative mb-6 mr-10 flex min-h-[122px] min-w-0 cursor-pointer flex-col break-words">
+      <div className="relative mb-6 mr-10 flex size-full min-h-[122px] min-w-0 cursor-pointer flex-col break-words">
        <AnimationCard className="min-h-[122px]">
        <div className="flex items-center">
           <div className="mr-3 flex size-10 overflow-hidden rounded-full">
