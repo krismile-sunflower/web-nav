@@ -36,6 +36,10 @@ npm install @prisma/client
 npx prisma generate
 ```
 
+## 安装失败情况
+- sharp 进入文件夹C:\Users\xxx\AppData\Local\npm-cache\_libvips, 放入下载失败的sahrp
+- python 进入python安装python
+
 ## License
 
 Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
