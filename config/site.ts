@@ -10,6 +10,10 @@ export const siteConfig = {
       href: "/",
     },
     {
+      title: "工具",
+      href: "/tools",
+    },
+    {
       title: "热点",
       href: "/hot",
     },

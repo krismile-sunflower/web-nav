@@ -1,8 +1,8 @@
 import prisma from '@/lib/db';
-import type { Prisma } from '@prisma/client';
+import type {Prisma} from '@prisma/client';
 
 export default async function getNavLinks() {
-  const res = await prisma.category.findMany({
+  return await prisma.category.findMany({
     orderBy: [
       {
         rank: 'asc',
@@ -20,7 +20,6 @@ export default async function getNavLinks() {
       },
     },
   });
-  return res;
 }
 
 export type CategoryWithLinks = Prisma.PromiseReturnType<typeof getNavLinks>
